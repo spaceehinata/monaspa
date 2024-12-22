@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', serif;
+}
+body {
+    background-image: url('img/shutterstock_1467546281 1.png');
+    background-color: #080a0b;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ჰედერის სტილი */
+header {
+    background-color: #811010; /* შავი ფონტი */
+    margin: 0 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    max-height: 60px;
+}
+
+.logo img {
+    width: 190px;
+    height: 190px;
+    
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    position: relative;
+    top: 4.8vh;
+}
+
+.nav {
+    margin: 0 auto;
+}
+
+/* ნავიგაციის მენიუ */
+.nav-container {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    /* position: relative; */
+    /* z-index: 1;  */
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-container li a.active {
+    color: aquamarine;
+}
+
+/* მარჯვენა მხარე */
+.right-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* დაშორება ენასა და ქოინებს შორის */
+}
+
+.language-selector {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding-right: 40px; /* დაშორება ხაზამდე */
+    position: relative;
+}
+
+.language-selector::after {
+    content: '';
+    display: block;
+    width: 1px; /* ხაზის სისქე */
+    height: 40px; /* ხაზის სიმაღლე */
+    background-color: white; /* ხაზის ფერი */
+    position: absolute;
+    right: 0; /* მარჯვენა მხარეს */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.coins img {
+    height: 25px; /* გამოსახულების ზომა */
+    width: auto;
+}
+
+
+footer {
+    width: 1920px;
+    height: 243px;
+    position: relative; 
+    top: 1587px; 
+    background-color: #491111;
+    display: flex; /* იყენებს flexbox-ს */
+    align-items: center; /* ვერტიკალურად გასწორება */
+    justify-content: flex-start; /* ელემენტები მარცხნიდან განლაგდება */
+    padding-left: 318px; /* მარცხნიდან დაშორება */
+}
+
+.flogo img {
+    width: 212px;
+    height: 212px;
+    margin-right: 10px; /* ლოგოს და ტექსტს შორის დაშორება */
+}
+
+.date {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    font-weight: 600;
+}
+
+.date p {
+    margin: 0;
+    padding: 0;
+}
+
+.date a {
+    color: white;
+    text-decoration: none;
+    margin-top: 8px;
+    color: #3DB3A2;
+    display: block; 
+}
+/* .icons {
+    rihth-width: 318px;
+    left-width:1296;
+} */
+.Right {
+    display: flex;
+    flex-direction: column; /* ვერტიკალური განლაგება */
+    align-items: flex-end; /* ელემენტები მარჯვნივ */
+    position: absolute; /* სრული დივის გადაადგილება */
+    right: 20px; /* მარჯვენა მხარეს გადაადგილება */
+    top: 69px; /* ზედა ნაწილში გადაადგილება */
+    bottom: 69px;
+    gap: 32px;
+    right: 318px;
+
+  }
+  
+  .Right .icons {
+    display: flex;
+    gap: 10px; /* iconebs შორის დაშორება */
+  }
+  
+  .Right .icons a img {
+    width: 24px; /* icone ზომა */
+    height: 24px;
+  }
+  
+  .Right .contact {
+    font-size: 12px;
+    text-align: right;
+  }
+
+.tel  {
+    color: #E93830;
+    text-decoration: none; 
+  }
+.Right .contact a {
+    text-decoration: none;
+}
+  
