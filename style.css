@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #2210c0;
+  background-color: #111111;
   width: 1244px;
   height: 125px;
   padding: 0 36px;
@@ -20,15 +20,15 @@ header {
   margin: auto; /*გაიცენტრაა*/
   justify-content: space-between;
 }
-.logo {
+.logo img {
   width: 190px;
   height: 190px;
+  object-fit: contain;
 }
 
 .nav {
   display: flex;
   align-items: center; /*ვერტიკალურად გაცენტვრაა */
-  justify-content: space-between; /* ლინკები გასწორება */
 }
 
 .nav-container {
@@ -67,7 +67,7 @@ header {
   margin-right: 32px;
 }
 .coins-container {
-  width: 140px;
+  width: 126px;
   height: 50px;
   background-color: #162635;
   box-shadow: 0px 0px 8px 0px #335372 inset;
@@ -86,17 +86,20 @@ header {
   letter-spacing: 0.1em;
   color: transparent;
 }
-/* :hover ro gaatetros */
+.nav-container li a:hover {
+  color: white;
+}
+
 footer {
-  width: 1920px;
+  width: 1241px;
   height: 243px;
   position: relative;
   top: 1587px;
   background-color: #491111;
-  display: flex; /* იყენებს flexbox-ს */
+  display: flex;
   align-items: center; /* ვერტიკალურად გასწორება */
-  justify-content: flex-start; /* ელემენტები მარცხნიდან განლაგდება */
-  padding-left: 318px; /* მარცხნიდან დაშორება */
+  margin: auto; /*გაიცენტრაა*/
+  justify-content: space-between;
 }
 
 .flogo img {
@@ -108,7 +111,7 @@ footer {
 .date {
   font-size: 12px;
   line-height: 18px;
-  text-align: right;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   font-weight: 600;
@@ -126,20 +129,11 @@ footer {
   color: #3db3a2;
   display: block;
 }
-/* .icons {
-    rihth-width: 318px;
-    left-width:1296;
-} */
 .Right {
   display: flex;
   flex-direction: column; /* ვერტიკალური განლაგება */
   align-items: flex-end; /* ელემენტები მარჯვნივ */
-  position: absolute; /* სრული დივის გადაადგილება */
-  right: 20px; /* მარჯვენა მხარეს გადაადგილება */
-  top: 69px; /* ზედა ნაწილში გადაადგილება */
-  bottom: 69px;
-  gap: 32px;
-  right: 318px;
+  gap: 16px; /* ელემენტებს შორის დაშორება */
 }
 
 .Right .icons {
@@ -155,6 +149,7 @@ footer {
 .Right .contact {
   font-size: 12px;
   text-align: right;
+  display: flex;
 }
 
 .tel {
@@ -163,4 +158,46 @@ footer {
 }
 .Right .contact a {
   text-decoration: none;
+}
+.Left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .right-container,
+  .nav {
+    display: none;
+  }
+  header {
+    height: 53px;
+    align-items: center;
+  }
+  .logo img {
+    width: 57px;
+    height: 44px;
+  }
+  .burger {
+    display: block;
+    height: 24px;
+    width: 25.28px;
+  }
+  .menu {
+    display: block;
+    width: 26px;
+    height: 18px;
+  }
+  footer {
+    /* width: 375px; */
+    height: 253px;
+  }
 }
