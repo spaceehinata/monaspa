@@ -9,17 +9,25 @@ body {
   background-color: #080a0b;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
   background-color: #111111;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header {
   width: 1244px;
   height: 125px;
   padding: 0 36px;
   display: flex;
-  margin: auto; /*გაიცენტრაა*/
+  margin: 0 auto; /*გაიცენტრაა*/
   justify-content: space-between;
+  align-items: center;
 }
+
 .logo img {
   width: 190px;
   height: 190px;
@@ -89,31 +97,32 @@ header {
 .nav-container li a:hover {
   color: white;
 }
-
 footer {
-  width: 1241px;
-  height: 243px;
-  position: relative;
-  top: 1587px;
-  background-color: #491111;
+  background-color: #171b1c;
+  width: 100%;
   display: flex;
-  align-items: center; /* ვერტიკალურად გასწორება */
-  margin: auto; /*გაიცენტრაა*/
-  justify-content: space-between;
+  justify-content: center;
 }
 
+.footer {
+  width: 1240px; /* ზუსტი სიგანე */
+  padding: 68px 0;
+  margin: 0 auto; /* ცენტრში გასწორება */
+  display: flex;
+  background-color: #171b1c;
+  justify-content: space-between;
+  align-items: center;
+}
 .flogo img {
   width: 212px;
   height: 212px;
-  margin-right: 10px; /* ლოგოს და ტექსტს შორის დაშორება */
+  margin-right: 10px;
 }
 
 .date {
   font-size: 12px;
   line-height: 18px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   font-weight: 600;
 }
 
@@ -123,12 +132,12 @@ footer {
 }
 
 .date a {
-  color: white;
+  color: #3db3a2;
   text-decoration: none;
   margin-top: 8px;
-  color: #3db3a2;
   display: block;
 }
+
 .Right {
   display: flex;
   flex-direction: column; /* ვერტიკალური განლაგება */
@@ -138,11 +147,11 @@ footer {
 
 .Right .icons {
   display: flex;
-  gap: 10px; /* iconebs შორის დაშორება */
+  gap: 10px; /* icon-ებს შორის დაშორება */
 }
 
 .Right .icons a img {
-  width: 24px; /* icone ზომა */
+  width: 24px; /* icon-ის ზომა */
   height: 24px;
 }
 
@@ -155,10 +164,13 @@ footer {
 .tel {
   color: #e93830;
   text-decoration: none;
+  font-weight: bold; /* ტელეფონის ნომრის ხაზგასმა */
 }
+
 .Right .contact a {
   text-decoration: none;
 }
+
 .Left {
   display: flex;
   flex-direction: row;
@@ -173,13 +185,14 @@ footer {
 .menu {
   display: none;
 }
+
 @media (max-width: 1024px) {
   .right-container,
   .nav {
     display: none;
   }
   header {
-    height: 53px;
+    height: 100%;
     align-items: center;
   }
   .logo img {
@@ -196,8 +209,52 @@ footer {
     width: 26px;
     height: 18px;
   }
+}
+@media (max-width: 777px) {
   footer {
-    /* width: 375px; */
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .footer {
+    /* width: 375px;
     height: 253px;
+    top: 1636px; */
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .flogo img {
+    width: 100px;
+    height: 100px;
+  }
+  .Left {
+    width: 340px;
+    height: 100px;
+    top: 1644px;
+    left: 19px;
+  }
+  .icons {
+    width: 126px;
+    height: 24px;
+    top: 1768px;
+    left: 124px;
+    align-items: center;
+    display: flex;
+    margin-left: 125px;
+    margin-right: 125px;
+    gap: 10px;
+  }
+  .contact {
+    width: 306px;
+    height: 49px;
+    text-align: center;
+  }
+  .contact p {
+    width: 306px;
+    height: 49px;
+    text-align: center;
   }
 }
